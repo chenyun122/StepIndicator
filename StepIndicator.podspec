@@ -6,14 +6,14 @@ Pod::Spec.new do |s|
                     StepIndicator is an iOS library that indicates steps in an animated way.
                    DESC
   s.homepage     = "https://github.com/chenyun122/StepIndicator"
-  s.screenshots  = "https://raw.githubusercontent.com/chenyun122/FamilyTreeView/master/Screenshot170830.PNG"
+  s.screenshots  = "https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshot.png"
   s.license      = "MIT"
   s.author       = { "Yun Chen" => "chenyun122@gmail.com" }
   s.platform     = :ios, "8.0"
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/chenyun122/FamilyTreeView.git", :tag => "#{s.version}" }
-  s.source_files  = "FamilyTreeView", "FamilyTreeView/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/chenyun122/StepIndicator.git", :tag => "#{s.version}" }
+  s.source_files  = "StepIndicator", "StepIndicator/**/*.swift"
   s.resource_bundles = {
-    'FamilyTreeView' => ['FamilyTreeView/**/*.{xib,xcassets}']
+    'StepIndicator' => ['StepIndicator/**/*.xcassets']
   }
 end

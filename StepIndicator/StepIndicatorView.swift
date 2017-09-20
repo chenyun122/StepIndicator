@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class StepIndicatorView: UIView {
+public class StepIndicatorView: UIView {
     
     // Variables
     static let defaultColor = UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
@@ -19,19 +19,19 @@ class StepIndicatorView: UIView {
     
     
     // MARK: - Properties
-    override var frame: CGRect {
+    override public var frame: CGRect {
         didSet{
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var numberOfSteps: Int = 5 {
+    @IBInspectable public var numberOfSteps: Int = 5 {
         didSet {
             self.createSteps()
         }
     }
     
-    @IBInspectable var currentStep: Int = -1 {
+    @IBInspectable public var currentStep: Int = -1 {
         didSet{
             if self.annularLayers.count <= 0 {
                 return
@@ -42,49 +42,49 @@ class StepIndicatorView: UIView {
         }
     }
     
-    @IBInspectable var circleRadius:CGFloat = 10.0 {
+    @IBInspectable public var circleRadius:CGFloat = 10.0 {
         didSet{
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var circleColor:UIColor = defaultColor {
+    @IBInspectable public var circleColor:UIColor = defaultColor {
         didSet {
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var circleTintColor:UIColor = defaultTintColor {
+    @IBInspectable public var circleTintColor:UIColor = defaultTintColor {
         didSet {
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var circleStrokeWidth:CGFloat = 3.0 {
+    @IBInspectable public var circleStrokeWidth:CGFloat = 3.0 {
         didSet{
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var lineColor:UIColor = defaultColor {
+    @IBInspectable public var lineColor:UIColor = defaultColor {
         didSet {
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var lineTintColor:UIColor = defaultTintColor {
+    @IBInspectable public var lineTintColor:UIColor = defaultTintColor {
         didSet {
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var lineMargin:CGFloat = 4.0 {
+    @IBInspectable public var lineMargin:CGFloat = 4.0 {
         didSet{
             self.updateSubLayers()
         }
     }
     
-    @IBInspectable var lineStrokeWidth:CGFloat = 2.0 {
+    @IBInspectable public var lineStrokeWidth:CGFloat = 2.0 {
         didSet{
             self.updateSubLayers()
         }
