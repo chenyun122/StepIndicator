@@ -37,19 +37,19 @@ Please clone this Demo project to find out how it's working easily.
 ```
 ### Customization
 ```swift
-        self.stepIndicatorView.circleColor = UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
-        self.stepIndicatorView.circleTintColor = UIColor(red: 0.0/255.0, green: 180.0/255.0, blue: 124.0/255.0, alpha: 1.0)
-        self.stepIndicatorView.circleStrokeWidth = 3.0
-        self.stepIndicatorView.circleRadius = 10.0
-        self.stepIndicatorView.lineColor = self.stepIndicatorView.circleColor
-        self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
-        self.stepIndicatorView.lineMargin = 4.0
-        self.stepIndicatorView.lineStrokeWidth = 2.0
+    self.stepIndicatorView.circleColor = UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
+    self.stepIndicatorView.circleTintColor = UIColor(red: 0.0/255.0, green: 180.0/255.0, blue: 124.0/255.0, alpha: 1.0)
+    self.stepIndicatorView.circleStrokeWidth = 3.0
+    self.stepIndicatorView.circleRadius = 10.0
+    self.stepIndicatorView.lineColor = self.stepIndicatorView.circleColor
+    self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
+    self.stepIndicatorView.lineMargin = 4.0
+    self.stepIndicatorView.lineStrokeWidth = 2.0
 ```
 
 ### Designable in Stroyboard and Xib
-<p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Designable.gif" alt="Designable" title="Designable" width="95%" height="95%">
+<p align="left" >
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Designable.gif" alt="Designable" title="Designable" width="90%" height="90%">
 </p>
 
 
