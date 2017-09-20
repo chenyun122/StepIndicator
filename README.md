@@ -1,6 +1,7 @@
 # StepIndicator
 
-
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/StepIndicator.svg)](https://img.shields.io/cocoapods/v/StepIndicator.svg)
+[![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
 
 StepIndicator is an iOS library that indicates steps in an animated way.  
 Writen in Swift 3.2 , and Swfit 4.0 is supported.  
@@ -11,7 +12,16 @@ Derived from the awesome Android version: https://github.com/badoualy/stepper-in
 
 ## Installation
 ###  CocoaPods
-Coming soon
+To integrate StepIndicator into your Xcode project using CocoaPods, specify it in your `Podfile`:
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+
+target 'YourProjectName' do
+   pod ‘StepIndicator’, '~> 1.0.2’
+end
+```
+And then remember to `import StepIndicator` module before using it.
 
 ###  Manually
 You could directly copy and add the folder `StepIndicator` to your project.   
