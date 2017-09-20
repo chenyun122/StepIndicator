@@ -2,8 +2,9 @@
 
 
 
-StepIndicator is an iOS library that indicates steps in an animated way. Swift 3.2 and 4.0 are supported.   
-It's the iOS implementation of the original Android version:https://github.com/badoualy/stepper-indicator
+StepIndicator is an iOS library that indicates steps in an animated way.  
+Writen in Swift 3.2 , and Swfit 4.0 is supported.  
+Derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
 <p align="center" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
 </p>
