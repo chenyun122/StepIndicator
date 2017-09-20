@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EIg-3h-U8D">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dgF-oZ-CO7">
+            <objects>
+                <navigationController id="EIg-3h-U8D" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V74-lg-YZu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CqR-7W-nFS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOC-G0-7e8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791" y="23"/>
+        </scene>
+        <!--Step Indicator Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StepIndicatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yST-gL-Hd6" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="56" y="94" width="263" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="E3e-xS-ZzW"/>
+                                    <constraint firstAttribute="width" constant="263" id="KBj-Ys-sXJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleStrokeWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineMargin">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineStrokeWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyL-yX-cNQ">
+                                <rect key="frame" x="0.0" y="182" width="375" height="485"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PnJ-CX-m6O"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.92549019607843142" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MyL-yX-cNQ" secondAttribute="bottom" id="4hO-2L-ZF3"/>
+                            <constraint firstItem="MyL-yX-cNQ" firstAttribute="top" secondItem="yST-gL-Hd6" secondAttribute="bottom" constant="8" id="QBN-a7-98y"/>
+                            <constraint firstAttribute="trailing" secondItem="MyL-yX-cNQ" secondAttribute="trailing" id="QrL-9h-fK1"/>
+                            <constraint firstItem="MyL-yX-cNQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dE1-gl-5S0"/>
+                            <constraint firstItem="yST-gL-Hd6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ge3-Gy-hdE"/>
+                            <constraint firstItem="yST-gL-Hd6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="utg-A5-v2l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step Indicator Demo" id="2qk-Vj-Y8L"/>
+                    <connections>
+                        <outlet property="scrollView" destination="MyL-yX-cNQ" id="hMm-vp-os5"/>
+                        <outlet property="stepIndicatorView" destination="yST-gL-Hd6" id="vEk-q1-Nb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="23"/>
+        </scene>
+    </scenes>
+</document>
