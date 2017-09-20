@@ -14,7 +14,10 @@ class AnnularLayer: CAShapeLayer {
     let centerLayer = CAShapeLayer()
     let flagLayer = CALayer()
     let annularPath = UIBezierPath()
+
     static let originalScale = CATransform3DMakeScale(1.0, 1.0, 1.0)
+    static let flagImageName = "CYStepIndicator_ic_done_white"
+    static var flagCGImage:CGImage?
     
     override init() {
         super.init()
@@ -22,8 +25,19 @@ class AnnularLayer: CAShapeLayer {
         self.fillColor = UIColor.clear.cgColor
         self.lineWidth = 3
         
-        let flagImage = UIImage(named: "CYStepIndicator_ic_done_white")?.cgImage
-        self.flagLayer.contents = flagImage
+        if AnnularLayer.flagCGImage == nil {
+            var flagImage = UIImage(named: AnnularLayer.flagImageName)
+            if flagImage == nil {
+                let bundle = Bundle(for: AnnularLayer.self)
+                if let url = bundle.url(forResource: "StepIndicator", withExtension: "bundle") {
+                    let bundle = Bundle(url: url)
+                    flagImage = UIImage(named: AnnularLayer.flagImageName, in: bundle, compatibleWith: nil)
+                }
+            }
+            AnnularLayer.flagCGImage = flagImage?.cgImage
+        }
+
+        self.flagLayer.contents = AnnularLayer.flagCGImage
         self.fullCircleLayer.addSublayer(self.flagLayer)
     }
     
