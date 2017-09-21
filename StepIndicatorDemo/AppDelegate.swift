@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CYStepIndicator
+//  StepIndicator
 //
 //  Created by Yun Chen on 2017/7/14.
 //  Copyright © 2017 Yun CHEN. All rights reserved.

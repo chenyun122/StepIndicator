@@ -5,7 +5,7 @@
 
 StepIndicator is an iOS library that indicates steps in an animated way.  
 Writen in Swift 3.2 , and Swfit 4.0 is supported.  
-Derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
+The idea and design derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
 <p align="center" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
 </p>
@@ -28,8 +28,8 @@ You could directly copy and add the folder `StepIndicator` to your project.
 
 
 ## Usage
-You could use `StepIndicatorView` like you use `UIView`, create and set it programmatically, or get everything done with Storyboard and XIB.
-Please clone this [Demo](https://github.com/chenyun122/StepIndicator) project to find out how easy it is working.
+You could use `StepIndicatorView` like you use `UIView`, create and layout it programmatically, or get everything done with Storyboard and XIB.  
+Additionally, clone this [Demo](https://github.com/chenyun122/StepIndicator) project to find out how easy it is working. It's also provide a way to cooperate with UIScrollView.
 ### Programmatically
 ```swift
     //......
@@ -46,7 +46,9 @@ Please clone this [Demo](https://github.com/chenyun122/StepIndicator) project to
     }
     //......
 ```
-### Customization
+
+### Customization (Optional)
+Values of following properties have been set as defaults already. Change them if they are not suitable for you.
 ```swift
     self.stepIndicatorView.circleColor = UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
     self.stepIndicatorView.circleTintColor = UIColor(red: 0.0/255.0, green: 180.0/255.0, blue: 124.0/255.0, alpha: 1.0)
@@ -58,10 +60,13 @@ Please clone this [Demo](https://github.com/chenyun122/StepIndicator) project to
     self.stepIndicatorView.lineStrokeWidth = 2.0
 ```
 
-### Designable in Stroyboard and Xib
+### Designable in Stroyboard and Xib (Optional)
+After add a `UIView` to Stroyboard or Xib, change its class to `StepIndicatorView`. Then you are able to config it as this demonstration:
 <p align="left" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Designable.gif" alt="Designable" title="Designable" width="90%" height="90%">
 </p>
+
+Hope you will enjoy it! Make an issue to me if you have problems or need some improvements. 
 
 ## License
 StepIndicator is released under the MIT license. See LICENSE for details.

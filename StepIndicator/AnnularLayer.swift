@@ -1,6 +1,6 @@
 //
 //  AnnularLayer.swift
-//  CYStepIndicator
+//  StepIndicator
 //
 //  Created by Yun CHEN on 2017/9/1.
 //  Copyright © 2017 Yun CHEN. All rights reserved.
