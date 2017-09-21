@@ -3,9 +3,10 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/StepIndicator.svg)](https://img.shields.io/cocoapods/v/StepIndicator.svg)
 [![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
 
-StepIndicator is an iOS library that indicates steps in an animated way.  
-Writen in Swift 3.2 , and Swfit 4.0 is supported.  
-The idea and design derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
+StepIndicator is an iOS library that indicates steps in an animated way. Writen in Swift 3.2 , and Swfit 4.0 is supported.  
+The idea and design are derived from the awesome Android version:  
+https://github.com/badoualy/stepper-indicator  
+
 <p align="center" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
 </p>
@@ -65,7 +66,7 @@ After add a `UIView` to Stroyboard or Xib, change its class to `StepIndicatorVie
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Designable.gif" alt="Designable" title="Designable" width="90%" height="90%">
 </p>
 
-<span style="color:#DBB027">Hope you will enjoy it! Make an issue to me if you have problems or need some improvements.</span>
+Hope you will enjoy it! Make an issue to me if you have problems or need some improvements.
 
 ## License
 StepIndicator is released under the MIT license. See LICENSE for details.
