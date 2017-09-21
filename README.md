@@ -61,7 +61,7 @@ Values of following properties have been set as defaults already. Change them if
 ```
 
 ### Designable in Stroyboard and Xib (Optional)
-After add a `UIView` to Stroyboard or Xib, change its class to `StepIndicatorView`. Then you are able to config it as this demonstration:
+After adding a `UIView` to Stroyboard or Xib, change its class to `StepIndicatorView`. Then you are able to config it as this demonstration:
 <p align="left" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Designable.gif" alt="Designable" title="Designable" width="90%" height="90%">
 </p>
