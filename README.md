@@ -29,7 +29,7 @@ You could directly copy and add the folder `StepIndicator` to your project.
 
 
 ## Usage
-You could use `StepIndicatorView` like you use `UIView`, create and layout it programmatically, or get everything done with Storyboard and XIB. Additionally, clone this [Demo](https://github.com/chenyun122/StepIndicator) project to find out how easy it is working. It's also provide a way to cooperate with UIScrollView.
+You could use `StepIndicatorView` like you use `UIView`, create and layout it programmatically, or get everything done with Storyboard and XIB. Additionally, clone this [Demo](https://github.com/chenyun122/StepIndicator) project to find out how easy it is working. It also provides a way to cooperate with UIScrollView.
 ### Programmatically
 ```swift
     //......
