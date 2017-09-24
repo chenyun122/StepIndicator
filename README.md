@@ -1,4 +1,4 @@
-# StepIndicator [中文说明](https://github.com/chenyun122/StepIndicator/master/README_CN.md)
+# StepIndicator [中文说明](https://github.com/chenyun122/StepIndicator/blob/master/README_CN.md)
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/StepIndicator.svg)](https://img.shields.io/cocoapods/v/StepIndicator.svg)
 [![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
