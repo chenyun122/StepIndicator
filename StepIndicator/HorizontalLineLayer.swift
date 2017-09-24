@@ -10,8 +10,18 @@ import UIKit
 
 class HorizontalLineLayer: CAShapeLayer {
     
-    let tintLineLayer = CAShapeLayer()
+    private let tintLineLayer = CAShapeLayer()
     
+    // MARK: - Properties
+    var tintColor:UIColor?
+    var isFinished:Bool = false {
+        didSet{
+            self.updateStatus()
+        }
+    }
+    
+    
+    //MARK: - Initialization
     override init() {
         super.init()
         
@@ -22,42 +32,10 @@ class HorizontalLineLayer: CAShapeLayer {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    
-    // MARK: - Properties
-    override var frame: CGRect {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
-    override var lineWidth: CGFloat {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
-    override var strokeColor: CGColor? {
-        didSet {
-            self.updateStatus()
-        }
-    }
-    
-    var tintColor:UIColor? {
-        didSet {
-            self.updateStatus()
-        }
-    }
-    
-    var isFinished:Bool = false {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
+
     
     // MARK: - Functions
-    private func updateStatus() {
+    func updateStatus() {
         self.drawLinePath()
         if isFinished {
             self.drawTintLineAnimated()

@@ -133,6 +133,7 @@ public class StepIndicatorView: UIView {
             annularLayer.strokeColor = self.circleColor.cgColor
             annularLayer.tintColor = self.circleTintColor
             annularLayer.lineWidth = self.circleStrokeWidth
+            annularLayer.updateStatus()
             
             if (i < self.numberOfSteps - 1) {
                 let lineLayer = self.horizontalLineLayers[i]
@@ -140,6 +141,7 @@ public class StepIndicatorView: UIView {
                 lineLayer.strokeColor = self.lineColor.cgColor
                 lineLayer.tintColor = self.lineTintColor
                 lineLayer.lineWidth = self.lineStrokeWidth
+                lineLayer.updateStatus()
             }
         }
     }

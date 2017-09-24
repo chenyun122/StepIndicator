@@ -10,15 +10,31 @@ import UIKit
 
 class AnnularLayer: CAShapeLayer {
     
-    let fullCircleLayer = CAShapeLayer()
-    let centerLayer = CAShapeLayer()
-    let flagLayer = CALayer()
-    let annularPath = UIBezierPath()
+    private let fullCircleLayer = CAShapeLayer()
+    private let centerLayer = CAShapeLayer()
+    private let flagLayer = CALayer()
+    private let annularPath = UIBezierPath()
 
-    static let originalScale = CATransform3DMakeScale(1.0, 1.0, 1.0)
-    static let flagImageName = "CYStepIndicator_ic_done_white"
-    static var flagCGImage:CGImage?
+    static private let originalScale = CATransform3DMakeScale(1.0, 1.0, 1.0)
+    static private let flagImageName = "CYStepIndicator_ic_done_white"
+    static private var flagCGImage:CGImage?
     
+    
+    // MARK: - Properties
+    var tintColor:UIColor?
+    var isCurrent:Bool = false {
+        didSet{
+            self.updateStatus()
+        }
+    }
+    var isFinished:Bool = false {
+        didSet{
+            self.updateStatus()
+        }
+    }
+    
+    
+    //MARK: - Initialization
     override init() {
         super.init()
         
@@ -27,6 +43,8 @@ class AnnularLayer: CAShapeLayer {
         
         if AnnularLayer.flagCGImage == nil {
             var flagImage = UIImage(named: AnnularLayer.flagImageName)
+            
+            //For Pods bundle
             if flagImage == nil {
                 let bundle = Bundle(for: AnnularLayer.self)
                 if let url = bundle.url(forResource: "StepIndicator", withExtension: "bundle") {
@@ -46,46 +64,8 @@ class AnnularLayer: CAShapeLayer {
     }
 
     
-    // MARK: - Properties
-    override var frame: CGRect {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
-    override var lineWidth: CGFloat {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
-    override var strokeColor: CGColor? {
-        didSet {
-            self.updateStatus()
-        }
-    }
-    
-    var tintColor:UIColor? {
-        didSet {
-            self.updateStatus()
-        }
-    }
-    
-    var isCurrent:Bool = false {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
-    var isFinished:Bool = false {
-        didSet{
-            self.updateStatus()
-        }
-    }
-    
-    
     // MARK: - Functions
-    private func updateStatus() {
+    func updateStatus() {
         if isFinished {
             self.path = nil
             self.drawFullCircleAnimated()
