@@ -63,7 +63,7 @@ end
     self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
     self.stepIndicatorView.lineMargin = 4.0
     self.stepIndicatorView.lineStrokeWidth = 2.0
-    self.stepIndicatorView.displayNumbers = false //indicates if it displays numbers at the center instead of the core circle
+    self.stepIndicatorView.displayNumbers = false //圆圈中间是否显示数字
 ```
 
 ### 支持在 Stroyboard 和 Xib 中直接配置 (可选)
