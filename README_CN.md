@@ -7,11 +7,11 @@ StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。�
 它的设计思想来源于此 Android 版本: https://github.com/badoualy/stepper-indicator  
 
 <p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%" />
 </p>
 
 <p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="60%" height="60%">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="60%" height="60%" />
 </p>
 
 ## 安装

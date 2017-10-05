@@ -8,11 +8,11 @@ Writen in Swift 3.2 , and Swfit 4.0 is supported.
 The idea and design are derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
 
 <p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%" />
 </p>
 
 <p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="60%" height="60%">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="40%" height="40%" />
 </p>
 
 ## Installation
