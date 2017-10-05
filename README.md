@@ -24,7 +24,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'YourProjectName' do
-   pod ‘StepIndicator’, '~> 1.0.3’
+   pod ‘StepIndicator’, '~> 1.0.4’
 end
 ```
 And then remember to `import StepIndicator` module before using it.
