@@ -12,6 +12,7 @@ The idea and design are derived from the awesome Android version: https://github
 </p>
 
 <p align="center" >
+Numbers supported:
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="35%" height="35%" />
 </p>
 
