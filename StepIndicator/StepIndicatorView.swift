@@ -42,6 +42,12 @@ public class StepIndicatorView: UIView {
         }
     }
     
+    @IBInspectable public var displayNumbers: Bool = false {
+        didSet {
+            self.updateSubLayers()
+        }
+    }
+    
     @IBInspectable public var circleRadius:CGFloat = 10.0 {
         didSet{
             self.updateSubLayers()
@@ -130,9 +136,11 @@ public class StepIndicatorView: UIView {
             let annularLayer = self.annularLayers[i]
             let x = self.numberOfSteps == 1 ? self.frame.width / 2.0 - self.circleRadius : self.lineMargin + CGFloat(i) * stepWidth
             annularLayer.frame = CGRect(x: x, y: y - self.circleRadius, width: diameter, height: diameter)
-            annularLayer.strokeColor = self.circleColor.cgColor
+            annularLayer.annularDefaultColor = self.circleColor
             annularLayer.tintColor = self.circleTintColor
             annularLayer.lineWidth = self.circleStrokeWidth
+            annularLayer.displayNumber = self.displayNumbers
+            annularLayer.step = i + 1
             annularLayer.updateStatus()
             
             if (i < self.numberOfSteps - 1) {

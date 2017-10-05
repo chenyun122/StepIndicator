@@ -11,10 +11,11 @@ import UIKit
 class AnnularLayer: CAShapeLayer {
     
     private let fullCircleLayer = CAShapeLayer()
-    private let centerLayer = CAShapeLayer()
+    private let centerCircleLayer = CAShapeLayer()
     private let flagLayer = CALayer()
     private let annularPath = UIBezierPath()
-
+    lazy private var centerTextLayer = CATextLayer()
+    
     static private let originalScale = CATransform3DMakeScale(1.0, 1.0, 1.0)
     static private let flagImageName = "CYStepIndicator_ic_done_white"
     static private var flagCGImage:CGImage?
@@ -22,11 +23,16 @@ class AnnularLayer: CAShapeLayer {
     
     // MARK: - Properties
     var tintColor:UIColor?
+    var displayNumber = false
+    var step:Int = 0
+    var annularDefaultColor: UIColor?
+    
     var isCurrent:Bool = false {
         didSet{
             self.updateStatus()
         }
     }
+    
     var isFinished:Bool = false {
         didSet{
             self.updateStatus()
@@ -63,6 +69,9 @@ class AnnularLayer: CAShapeLayer {
         super.init(coder: aDecoder)
     }
 
+    override init(layer: Any) {
+        super.init(layer: layer)
+    }
     
     // MARK: - Functions
     func updateStatus() {
@@ -74,12 +83,29 @@ class AnnularLayer: CAShapeLayer {
             fullCircleLayer.removeFromSuperlayer()
             
             self.drawAnnularPath()
-            
-            if isCurrent {
-                self.drawCenterAnimated()
+
+            if self.displayNumber {
+                self.centerCircleLayer.removeFromSuperlayer()
+                
+                if isCurrent {
+                    self.strokeColor = self.tintColor?.cgColor
+                }
+                else{
+                    self.strokeColor = self.annularDefaultColor?.cgColor
+                }
+                
+                self.drawText()
             }
             else{
-                centerLayer.removeFromSuperlayer()
+                self.centerTextLayer.removeFromSuperlayer()
+                self.strokeColor = self.annularDefaultColor?.cgColor
+                
+                if isCurrent {
+                    self.drawCenterCircleAnimated()
+                }
+                else{
+                    self.centerCircleLayer.removeFromSuperlayer()
+                }
             }
         }
     }
@@ -94,36 +120,55 @@ class AnnularLayer: CAShapeLayer {
         self.path = self.annularPath.cgPath
     }
     
-    private func drawCenterAnimated() {
+    private func drawCenterCircleAnimated() {
         let centerPath = UIBezierPath()
         let sideLength = fmin(self.frame.width, self.frame.height)
         let circlesRadius = sideLength / 2.0 - self.lineWidth - sideLength * 0.15
         
         centerPath.addArc(withCenter: CGPoint(x:self.bounds.midX, y:self.bounds.midY), radius: circlesRadius, startAngle: 0.0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
-        self.centerLayer.path = centerPath.cgPath
-        self.centerLayer.transform = AnnularLayer.originalScale
-        self.centerLayer.frame = self.bounds
-        self.centerLayer.anchorPoint = CGPoint(x:0.5,y:0.5)
-        self.centerLayer.fillColor = self.tintColor?.cgColor
-        self.addSublayer(self.centerLayer)
+        self.centerCircleLayer.path = centerPath.cgPath
+        self.centerCircleLayer.transform = AnnularLayer.originalScale
+        self.centerCircleLayer.frame = self.bounds
+        self.centerCircleLayer.anchorPoint = CGPoint(x:0.5,y:0.5)
+        self.centerCircleLayer.fillColor = self.tintColor?.cgColor
+        self.addSublayer(self.centerCircleLayer)
+        
+        self.centerTextLayer.removeFromSuperlayer()
         
         self.animateCenter()
+        self.strokeColor = self.annularDefaultColor?.cgColor
+    }
+    
+    private func drawText() {
+        let sideLength = fmin(self.frame.width, self.frame.height)
+        
+        self.centerTextLayer.string = "\(self.step)"
+        self.centerTextLayer.frame = self.bounds
+        self.centerTextLayer.position = CGPoint(x: self.bounds.midX, y: self.bounds.midY * 1.2)
+        self.centerTextLayer.contentsScale = UIScreen.main.scale
+        self.centerTextLayer.foregroundColor = self.strokeColor
+        self.centerTextLayer.alignmentMode = kCAAlignmentCenter
+        let fontSize = sideLength * 0.65
+        self.centerTextLayer.font = UIFont.boldSystemFont(ofSize: fontSize) as CFTypeRef
+        self.centerTextLayer.fontSize = fontSize
+        
+        self.addSublayer(self.centerTextLayer)
     }
     
     private func animateCenter() {
-        self.centerLayer.transform = CATransform3DMakeScale(0.8, 0.8, 1.0)
+        self.centerCircleLayer.transform = CATransform3DMakeScale(0.8, 0.8, 1.0)
         CATransaction.begin()
         CATransaction.setCompletionBlock {
             CATransaction.setCompletionBlock {
-                self.centerLayer.transform = AnnularLayer.originalScale
-                self.centerLayer.removeAllAnimations()
+                self.centerCircleLayer.transform = AnnularLayer.originalScale
+                self.centerCircleLayer.removeAllAnimations()
             }
-            self.centerLayer.transform = CATransform3DMakeScale(1.1, 1.1, 1.0)
-            self.centerLayer.removeAllAnimations()
-            self.centerLayer.add(self.createTransformAnimationWithScale(x: 1.0, y: 1.0), forKey: "CenterLayerAnimationScale1.0")
+            self.centerCircleLayer.transform = CATransform3DMakeScale(1.1, 1.1, 1.0)
+            self.centerCircleLayer.removeAllAnimations()
+            self.centerCircleLayer.add(self.createTransformAnimationWithScale(x: 1.0, y: 1.0), forKey: "CenterLayerAnimationScale1.0")
         }
-        self.centerLayer.add(self.createTransformAnimationWithScale(x: 1.1, y: 1.1), forKey: "CenterLayerAnimationScale1.1")
+        self.centerCircleLayer.add(self.createTransformAnimationWithScale(x: 1.1, y: 1.1), forKey: "CenterLayerAnimationScale1.1")
         CATransaction.commit()
     }
     
