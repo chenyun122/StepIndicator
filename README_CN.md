@@ -11,7 +11,7 @@ StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。�
 </p>
 
 <p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator" title="StepIndicator">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="60%" height="60%">
 </p>
 
 ## 安装
@@ -62,7 +62,7 @@ end
     self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
     self.stepIndicatorView.lineMargin = 4.0
     self.stepIndicatorView.lineStrokeWidth = 2.0
-    self.stepIndicatorView.displayNumbers = false
+    self.stepIndicatorView.displayNumbers = false //indicates if it displays numbers in center instead of core circle
 ```
 
 ### 支持在 Stroyboard 和 Xib 中直接配置 (可选)

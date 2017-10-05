@@ -12,7 +12,7 @@ The idea and design are derived from the awesome Android version: https://github
 </p>
 
 <p align="center" >
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator" title="StepIndicator">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="60%" height="60%">
 </p>
 
 ## Installation
@@ -62,7 +62,7 @@ Values of following properties have been set as defaults already. Change them if
     self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
     self.stepIndicatorView.lineMargin = 4.0
     self.stepIndicatorView.lineStrokeWidth = 2.0
-    self.stepIndicatorView.displayNumbers = false
+    self.stepIndicatorView.displayNumbers = false //indicates if it displays numbers in center instead of core circle
 ```
 
 ### Designable in Stroyboard and Xib (Optional)
