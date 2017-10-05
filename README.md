@@ -11,6 +11,10 @@ The idea and design are derived from the awesome Android version: https://github
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
 </p>
 
+<p align="center" >
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator" title="StepIndicator">
+</p>
+
 ## Installation
 ###  CocoaPods
 To integrate StepIndicator into your Xcode project using CocoaPods, specify it in your `Podfile`:
@@ -58,6 +62,7 @@ Values of following properties have been set as defaults already. Change them if
     self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
     self.stepIndicatorView.lineMargin = 4.0
     self.stepIndicatorView.lineStrokeWidth = 2.0
+    self.stepIndicatorView.displayNumbers = false
 ```
 
 ### Designable in Stroyboard and Xib (Optional)

@@ -10,6 +10,10 @@ StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。�
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%">
 </p>
 
+<p align="center" >
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator" title="StepIndicator">
+</p>
+
 ## 安装
 ###  CocoaPods
 在 Xcode 项目中通过 CocoaPods 集成 StepIndicator,只需在 `Podfile` 文件中指定以下内容:
@@ -58,6 +62,7 @@ end
     self.stepIndicatorView.lineTintColor = self.stepIndicatorView.circleTintColor
     self.stepIndicatorView.lineMargin = 4.0
     self.stepIndicatorView.lineStrokeWidth = 2.0
+    self.stepIndicatorView.displayNumbers = false
 ```
 
 ### 支持在 Stroyboard 和 Xib 中直接配置 (可选)

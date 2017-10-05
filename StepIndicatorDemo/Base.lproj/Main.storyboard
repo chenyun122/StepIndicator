@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yST-gL-Hd6" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
-                                <rect key="frame" x="56" y="94" width="263" height="80"/>
+                                <rect key="frame" x="56" y="114" width="263" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="E3e-xS-ZzW"/>
                                     <constraint firstAttribute="width" constant="263" id="KBj-Ys-sXJ"/>
@@ -65,7 +65,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyL-yX-cNQ">
-                                <rect key="frame" x="0.0" y="182" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="202" width="375" height="465"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="PnJ-CX-m6O"/>
                                 </connections>
