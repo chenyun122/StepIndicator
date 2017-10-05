@@ -11,7 +11,7 @@ StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。�
 </p>
 
 <p align="center" >
-支持数字显示:
+支持数字显示:<br/>
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="35%" height="35%" />
 </p>
 
