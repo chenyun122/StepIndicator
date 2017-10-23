@@ -1,7 +1,9 @@
-# StepIndicator [中文说明](https://github.com/chenyun122/StepIndicator/blob/master/README_CN.md)
+# StepIndicator 
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/StepIndicator.svg)](https://img.shields.io/cocoapods/v/StepIndicator.svg)
 [![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
+
+[简体中文](https://github.com/chenyun122/StepIndicator/blob/master/README_CN.md)  
 
 StepIndicator is an iOS library that indicates steps in an animated way.   
 Writen in Swift 3.2 , and Swfit 4.0 is supported.  

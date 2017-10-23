@@ -1,7 +1,9 @@
-# StepIndicator [English](https://github.com/chenyun122/StepIndicator)
+# StepIndicator 
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/StepIndicator.svg)](https://img.shields.io/cocoapods/v/StepIndicator.svg)
 [![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
+
+[English](https://github.com/chenyun122/StepIndicator)  
 
 StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。由 Swift3.2 书写，支持 Swift4.0 。  
 它的设计思想来源于此 Android 版本: https://github.com/badoualy/stepper-indicator  
