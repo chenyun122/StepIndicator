@@ -33,6 +33,9 @@ class HorizontalLineLayer: CAShapeLayer {
         super.init(coder: aDecoder)
     }
 
+    override init(layer: Any) {
+        super.init(layer: layer)
+    }
     
     // MARK: - Functions
     func updateStatus() {
