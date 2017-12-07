@@ -74,7 +74,8 @@ end
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Designable.gif" alt="Designable" title="Designable" width="90%" height="90%">
 </p>
 
-希望此库能给您带来帮助！如果您碰到使用问题，或需要增加一些功能，请提 issue 给我。
+## 您的帮助
+希望此库能给您带来帮助！如果您碰到使用问题，或需要增加一些功能，请提 issue 给我。 同时非常感谢您能够给予此项目点个Star鼓励！
 
 ## 许可
 StepIndicator 基于 MIT 许可发布， 详情请参见 LICENSE 文件。
