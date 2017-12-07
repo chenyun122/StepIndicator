@@ -75,7 +75,7 @@ After adding a `UIView` to Stroyboard or Xib, change its class to `StepIndicator
 </p>
 
 ## Help
-Hope you will enjoy it! Feel free to make an issue to me if you have any problems or need some improvements. And Please give the project a star if it's helpful to you, that's a great encouragement to me! ;)
+Hope you will enjoy it! Feel free to make an issue to me if you have any problems or need some improvements. And Please give the project a **star** if it's helpful to you, that's a great encouragement to me! ;)
 
 ## License
 StepIndicator is released under the MIT license. See LICENSE for details.
