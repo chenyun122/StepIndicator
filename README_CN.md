@@ -19,7 +19,7 @@ StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。�
 
 <p align="center" >
 支持多个方向(05/16/2018):<br/>
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Directions" width="35%" height="35%"/>
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Directions" width="38%" height="38%"/>
 </p>
 
 ## 安装
