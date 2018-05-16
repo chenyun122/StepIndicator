@@ -6,7 +6,7 @@
 [简体中文](https://github.com/chenyun122/StepIndicator/blob/master/README_CN.md)  
 
 StepIndicator is an iOS library that indicates steps in an animated way.   
-Writen in Swift 3.2 , and Swfit 4.0 is supported.  
+Swfit 4.1 is supported.  
 The idea and design are derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
 
 <p align="center" >
@@ -16,6 +16,11 @@ The idea and design are derived from the awesome Android version: https://github
 <p align="center" >
 Numbers supported:<br/>
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Screenshot_numbers.png" alt="StepIndicator Numbers" title="StepIndicator Numbers" width="35%" height="35%" />
+</p>
+
+<p align="center" >
+More directions supported(05/16/2018):<br/>
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" width="35%" height="35%" />
 </p>
 
 ## Installation

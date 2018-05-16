@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HorizontalLineLayer: CAShapeLayer {
+class LineLayer: CAShapeLayer {
     
     private let tintLineLayer = CAShapeLayer()
     
@@ -20,6 +20,11 @@ class HorizontalLineLayer: CAShapeLayer {
         }
     }
     
+    var isHorizontal:Bool = true {
+        didSet{
+            self.updateStatus()
+        }
+    }
     
     //MARK: - Initialization
     override init() {
@@ -50,21 +55,35 @@ class HorizontalLineLayer: CAShapeLayer {
     
     private func drawLinePath() {
         let linePath = UIBezierPath()
-        let centerY = self.frame.height / 2.0
         
-        linePath.move(to: CGPoint(x: 0, y: centerY))
-        linePath.addLine(to: CGPoint(x: self.frame.width, y: centerY))
-        
+        if self.isHorizontal {
+            let centerY = self.frame.height / 2.0
+            linePath.move(to: CGPoint(x: 0, y: centerY))
+            linePath.addLine(to: CGPoint(x: self.frame.width, y: centerY))
+        }
+        else{
+            let centerX = self.frame.width / 2.0
+            linePath.move(to: CGPoint(x: centerX, y: 0))
+            linePath.addLine(to: CGPoint(x:centerX , y: self.frame.height))
+        }
+
         self.path = linePath.cgPath
     }
     
     private func drawTintLineAnimated() {
         let tintLinePath = UIBezierPath()
-        let centerY = self.frame.height / 2.0
         
-        tintLinePath.move(to: CGPoint(x: 0, y: centerY))
-        tintLinePath.addLine(to: CGPoint(x: self.frame.width, y: centerY))
-        
+        if self.isHorizontal {
+            let centerY = self.frame.height / 2.0
+            tintLinePath.move(to: CGPoint(x: 0, y: centerY))
+            tintLinePath.addLine(to: CGPoint(x: self.frame.width, y: centerY))
+        }
+        else{
+            let centerX = self.frame.width / 2.0
+            tintLinePath.move(to: CGPoint(x: centerX, y: 0))
+            tintLinePath.addLine(to: CGPoint(x: centerX, y: self.frame.height))
+        }
+
         self.tintLineLayer.path = tintLinePath.cgPath
         self.tintLineLayer.frame = self.bounds
         self.tintLineLayer.strokeColor = self.tintColor?.cgColor

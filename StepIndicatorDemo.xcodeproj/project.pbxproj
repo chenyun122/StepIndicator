@@ -12,7 +12,7 @@
 		94F1F36B1F18AF5700A99216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F1F36A1F18AF5700A99216 /* Assets.xcassets */; };
 		94F1F36E1F18AF5700A99216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F1F36C1F18AF5700A99216 /* LaunchScreen.storyboard */; };
 		9E1F9EA71F7218C60005C30A /* AnnularLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1F9EA31F7218C60005C30A /* AnnularLayer.swift */; };
-		9E1F9EA81F7218C60005C30A /* HorizontalLineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1F9EA41F7218C60005C30A /* HorizontalLineLayer.swift */; };
+		9E1F9EA81F7218C60005C30A /* LineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1F9EA41F7218C60005C30A /* LineLayer.swift */; };
 		9E1F9EA91F7218C60005C30A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1F9EA51F7218C60005C30A /* Media.xcassets */; };
 		9E1F9EAA1F7218C60005C30A /* StepIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1F9EA61F7218C60005C30A /* StepIndicatorView.swift */; };
 		9E7222661F717CCE00009621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1F3651F18AF5700A99216 /* ViewController.swift */; };
@@ -27,7 +27,7 @@
 		94F1F36D1F18AF5700A99216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94F1F36F1F18AF5700A99216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1F9EA31F7218C60005C30A /* AnnularLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnularLayer.swift; sourceTree = "<group>"; };
-		9E1F9EA41F7218C60005C30A /* HorizontalLineLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLineLayer.swift; sourceTree = "<group>"; };
+		9E1F9EA41F7218C60005C30A /* LineLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineLayer.swift; sourceTree = "<group>"; };
 		9E1F9EA51F7218C60005C30A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		9E1F9EA61F7218C60005C30A /* StepIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 			children = (
 				9E1F9EA61F7218C60005C30A /* StepIndicatorView.swift */,
 				9E1F9EA31F7218C60005C30A /* AnnularLayer.swift */,
-				9E1F9EA41F7218C60005C30A /* HorizontalLineLayer.swift */,
+				9E1F9EA41F7218C60005C30A /* LineLayer.swift */,
 				9E1F9EA51F7218C60005C30A /* Media.xcassets */,
 			);
 			path = StepIndicator;
@@ -162,7 +162,7 @@
 				9E1F9EA71F7218C60005C30A /* AnnularLayer.swift in Sources */,
 				9E7222661F717CCE00009621 /* ViewController.swift in Sources */,
 				94F1F3641F18AF5700A99216 /* AppDelegate.swift in Sources */,
-				9E1F9EA81F7218C60005C30A /* HorizontalLineLayer.swift in Sources */,
+				9E1F9EA81F7218C60005C30A /* LineLayer.swift in Sources */,
 				9E1F9EAA1F7218C60005C30A /* StepIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,8 +304,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenyun.com.StepIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -319,8 +319,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenyun.com.StepIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

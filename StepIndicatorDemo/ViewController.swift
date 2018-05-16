@@ -32,6 +32,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         //self.stepIndicatorView.lineMargin = 4.0
         //self.stepIndicatorView.lineStrokeWidth = 2.0
         //self.stepIndicatorView.displayNumbers = false //indicates if it displays numbers at the center instead of the core circle
+        //self.stepIndicatorView.direction = .leftToRight
     }
     
     override func viewDidAppear(_ animated: Bool) {
