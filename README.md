@@ -20,7 +20,7 @@ Numbers supported:<br/>
 
 <p align="center" >
 More directions supported(05/16/2018):<br/>
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" width="90%" height="90%"/>
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" width="35%" height="35%"/>
 </p>
 
 ## Installation
