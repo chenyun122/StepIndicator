@@ -20,7 +20,7 @@ Numbers supported:<br/>
 
 <p align="center" >
 More directions supported(05/16/2018):<br/>
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" width="35%" height="35%" />
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" />
 </p>
 
 ## Installation
@@ -71,12 +71,19 @@ Values of following properties have been set as defaults already. Change them if
     self.stepIndicatorView.lineMargin = 4.0
     self.stepIndicatorView.lineStrokeWidth = 2.0
     self.stepIndicatorView.displayNumbers = false //indicates if it displays numbers at the center instead of the core circle
+    self.stepIndicatorView.direction = .leftToRight //four directions
 ```
 
 ### Designable in Stroyboard and Xib (Optional)
 After adding a `UIView` to Stroyboard or Xib, change its class to `StepIndicatorView`. Then you are able to config it as this demonstration:
 <p align="left" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Designable.gif" alt="Designable" title="Designable" width="90%" height="90%">
+</p>
+
+<p>
+Since Xcode(9.3) Inspector does not support enumeration options, we provide raw integer options for the directions.
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Designable.gif" alt="Directions" title="Directions">
+0-default,left to right. 1-right to left. 2-top to bottom. 3-bottom to top.
 </p>
 
 ## Help
