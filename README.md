@@ -20,7 +20,7 @@ Numbers supported:<br/>
 
 <p align="center" >
 More directions supported(05/16/2018):<br/>
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" />
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/RTL_Vertical.png" alt="StepIndicator Directions" title="StepIndicator Numbers" width="90%" height="90%"/>
 </p>
 
 ## Installation
@@ -82,7 +82,7 @@ After adding a `UIView` to Stroyboard or Xib, change its class to `StepIndicator
 
 <p>
 Since Xcode(9.3) Inspector does not support enumeration options, we provide raw integer options for the directions.
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/Designable.gif" alt="Directions" title="Directions">
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/DirectionDesignable.png" alt="Directions" title="Directions">
 0-default,left to right. 1-right to left. 2-top to bottom. 3-bottom to top.
 </p>
 
