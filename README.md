@@ -81,8 +81,8 @@ After adding a `UIView` to Stroyboard or Xib, change its class to `StepIndicator
 </p>
 
 <p>
-Since Xcode(9.3) Inspector does not support enumeration options, we provide raw integer options for the directions.
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/DirectionDesignable.png" alt="Directions" title="Directions">
+Since Xcode(9.3) Inspector does not support enumeration options, we provide raw integer options for the directions.<br>
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/DirectionDesignable.png" alt="Directions" title="Directions"><br>
 0-default,left to right. 1-right to left. 2-top to bottom. 3-bottom to top.
 </p>
 

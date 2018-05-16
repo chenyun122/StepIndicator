@@ -81,8 +81,8 @@ end
 </p>
 
 <p>
-由于 Xcode(9.3) 不支持枚举类型的可视化选择, 所以我们提供了枚举对应的整型来配置：
-<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/DirectionDesignable.png" alt="Directions" title="Directions">
+由于 Xcode(9.3) 不支持枚举类型的可视化选择, 所以我们提供了枚举对应的整型来配置：<br>
+<img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/DirectionDesignable.png" alt="Directions" title="Directions"><br>
 0-默认,由左到右; 1-右到左; 2-上到下; 3-下到上。
 </p>
 
