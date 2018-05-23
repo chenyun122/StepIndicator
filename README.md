@@ -4,8 +4,6 @@
 [![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
 
 [简体中文](https://github.com/chenyun122/StepIndicator/blob/master/README_CN.md)  
-Thanks for the star! 
-<iframe src="https://ghbtns.com/github-btn.html?user=chenyun122&repo=StepIndicator&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"> </iframe>
 
 StepIndicator is an iOS library that indicates steps in an animated way.   
 Swfit 4.1 is supported.  
@@ -93,4 +91,3 @@ Hope you will enjoy it! Feel free to make an issue to me if you have any problem
 
 ## License
 StepIndicator is released under the MIT license. See LICENSE for details.
-
