@@ -4,10 +4,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/StepIndicator.svg?style=flat)](http://cocoadocs.org/docsets/StepIndicator)
 
 [简体中文](https://github.com/chenyun122/StepIndicator/blob/master/README_CN.md)  
+Thanks for the star! 
+<iframe src="https://ghbtns.com/github-btn.html?user=chenyun122&repo=StepIndicator&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"> </iframe>
 
 StepIndicator is an iOS library that indicates steps in an animated way.   
 Swfit 4.1 is supported.  
-The idea and design are derived from the awesome Android version: https://github.com/badoualy/stepper-indicator  
+The idea and design are derived from the awesome [Android version](https://github.com/badoualy/stepper-indicator).  
 
 <p align="center" >
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/StepIndicator.gif" alt="StepIndicator" title="StepIndicator" width="35%" height="35%" />
@@ -81,7 +83,7 @@ After adding a `UIView` to Stroyboard or Xib, change its class to `StepIndicator
 </p>
 
 <p>
-Since Xcode(9.3) Inspector does not support enumeration options, we provide raw integer options for the directions.<br>
+Since Xcode(9.3) Inspector does not support enumeration options, we provide raw integer options for the directions:<br>
 <img src="https://raw.githubusercontent.com/chenyun122/StepIndicator/master/Screenshots/DirectionDesignable.png" alt="Directions" title="Directions"><br>
 0-default,left to right. 1-right to left. 2-top to bottom. 3-bottom to top.
 </p>
