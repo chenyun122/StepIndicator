@@ -220,7 +220,7 @@ public class StepIndicatorView: UIView {
         annularLayer.tintColor = self.circleTintColor
         annularLayer.lineWidth = self.circleStrokeWidth
         annularLayer.displayNumber = self.displayNumbers
-        annularLayer.showFlag = false
+        annularLayer.showFlag = showDoneIcon
     }
     
     private func applyLineStyle(lineLayer:LineLayer) {
