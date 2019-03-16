@@ -27,6 +27,17 @@ class AnnularLayer: CAShapeLayer {
     var step:Int = 0
     var annularDefaultColor: UIColor?
     
+    var showFlag: Bool = true {
+        didSet {
+            if !showFlag {
+                let flagImage = UIImage()
+                AnnularLayer.flagCGImage = flagImage.cgImage
+                self.flagLayer.contents = AnnularLayer.flagCGImage
+                self.fullCircleLayer.addSublayer(self.flagLayer)
+            }
+        }
+    }
+    
     var isCurrent:Bool = false {
         didSet{
             self.updateStatus()

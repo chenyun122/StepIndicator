@@ -25,6 +25,12 @@ public class StepIndicatorView: UIView {
     private let containerLayer = CALayer()
     
     // MARK: - Properties
+    var showDoneIcon: Bool = true {
+        didSet {
+            createSteps()
+        }
+    }
+    
     override public var frame: CGRect {
         didSet{
             self.updateSubLayers()
@@ -214,6 +220,7 @@ public class StepIndicatorView: UIView {
         annularLayer.tintColor = self.circleTintColor
         annularLayer.lineWidth = self.circleStrokeWidth
         annularLayer.displayNumber = self.displayNumbers
+        annularLayer.showFlag = false
     }
     
     private func applyLineStyle(lineLayer:LineLayer) {
