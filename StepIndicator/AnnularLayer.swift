@@ -39,6 +39,16 @@ class AnnularLayer: CAShapeLayer {
         }
     }
     
+    var showFlag: Bool = true {
+        didSet {
+            if !showFlag {
+                self.flagLayer.contents = nil
+            }
+            else{
+                self.flagLayer.contents = AnnularLayer.flagCGImage
+            }
+        }
+    }
     
     //MARK: - Initialization
     override init() {

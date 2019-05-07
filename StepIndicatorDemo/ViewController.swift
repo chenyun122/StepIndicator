@@ -33,6 +33,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         //self.stepIndicatorView.lineStrokeWidth = 2.0
         //self.stepIndicatorView.displayNumbers = false //indicates if it displays numbers at the center instead of the core circle
         //self.stepIndicatorView.direction = .leftToRight
+        //self.stepIndicatorView.showFlag = true
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +53,11 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     private func initScrollView() {
         self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width * CGFloat(self.stepIndicatorView.numberOfSteps + 1), height: self.scrollView.frame.height)
-        for i in 1...self.stepIndicatorView.numberOfSteps + 1 {
+        
+        let labelHeight = self.scrollView.frame.height / 2.0
+        let halfScrollViewWidth = self.scrollView.frame.width / 2.0
+        
+        for i in 1 ... self.stepIndicatorView.numberOfSteps + 1 {
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
             if i<=self.stepIndicatorView.numberOfSteps {
                 label.text = "\(i)"
@@ -62,7 +68,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
             label.textAlignment = NSTextAlignment.center
             label.font = UIFont.systemFont(ofSize: 35)
             label.textColor = UIColor.lightGray
-            label.center = CGPoint(x: self.scrollView.frame.width / 2.0 * (CGFloat(i - 1) * 2.0 + 1.0), y: self.scrollView.frame.height / 2.0)
+            label.center = CGPoint(x: halfScrollViewWidth * (CGFloat(i - 1) * 2.0 + 1.0), y:labelHeight)
             self.scrollView.addSubview(label)
         }
     }

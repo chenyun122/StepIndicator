@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EIg-3h-U8D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EIg-3h-U8D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,10 +106,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inh-g6-dbK" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
-                                <rect key="frame" x="43" y="91" width="290" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inh-g6-dbK" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="42.5" y="91" width="290" height="72"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="dZ9-cu-Vr8"/>
+                                    <constraint firstAttribute="height" constant="72" id="rPU-CW-QGj"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="directionRaw">
                                         <integer key="value" value="1"/>
@@ -122,10 +125,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZgA-cO-CjV" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgA-cO-CjV" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
                                 <rect key="frame" x="245" y="229" width="72" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="6vG-NW-nue"/>
+                                    <constraint firstAttribute="width" constant="72" id="huB-q2-OCg"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
                                         <integer key="value" value="5"/>
@@ -138,31 +144,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Right to Left mode" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-TF-CRh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right to Left mode" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-TF-CRh">
                                 <rect key="frame" x="120" y="63" width="135" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top to Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvo-5C-acZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top to Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvo-5C-acZ">
                                 <rect key="frame" x="43" y="201" width="103" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bottom to Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-SL-LXe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom to Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-SL-LXe">
                                 <rect key="frame" x="230" y="201" width="103" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egv-hZ-eKI" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egv-hZ-eKI" customClass="StepIndicatorView" customModule="StepIndicatorDemo" customModuleProvider="target">
                                 <rect key="frame" x="58" y="229" width="72" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="0gJ-nn-LL2"/>
+                                    <constraint firstAttribute="height" constant="290" id="STs-tH-b4P"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
                                         <integer key="value" value="5"/>
@@ -177,6 +183,21 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GhC-SL-LXe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rvo-5C-acZ" secondAttribute="trailing" constant="8" id="4o0-Sp-av2"/>
+                            <constraint firstItem="GhC-SL-LXe" firstAttribute="top" secondItem="inh-g6-dbK" secondAttribute="bottom" constant="38" id="84c-6H-vrz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZgA-cO-CjV" secondAttribute="trailing" constant="42" id="94s-38-CbX"/>
+                            <constraint firstItem="M5e-TF-CRh" firstAttribute="top" secondItem="LoZ-RY-efr" secondAttribute="bottom" constant="43" id="9xO-J5-mV4"/>
+                            <constraint firstItem="M5e-TF-CRh" firstAttribute="centerX" secondItem="Wd8-QT-T5k" secondAttribute="centerX" id="E38-5n-84Q"/>
+                            <constraint firstItem="inh-g6-dbK" firstAttribute="top" secondItem="M5e-TF-CRh" secondAttribute="bottom" constant="8" id="EVI-fj-1vz"/>
+                            <constraint firstItem="egv-hZ-eKI" firstAttribute="leading" secondItem="Wd8-QT-T5k" secondAttribute="leadingMargin" constant="42" id="FPv-02-NRe"/>
+                            <constraint firstItem="egv-hZ-eKI" firstAttribute="top" secondItem="Rvo-5C-acZ" secondAttribute="bottom" constant="8" id="JZW-Tf-CVW"/>
+                            <constraint firstItem="Rvo-5C-acZ" firstAttribute="leading" secondItem="Wd8-QT-T5k" secondAttribute="leadingMargin" constant="27" id="MG5-eF-YnE"/>
+                            <constraint firstItem="inh-g6-dbK" firstAttribute="centerX" secondItem="Wd8-QT-T5k" secondAttribute="centerX" id="Vx6-ac-EEd"/>
+                            <constraint firstItem="ZgA-cO-CjV" firstAttribute="top" secondItem="GhC-SL-LXe" secondAttribute="bottom" constant="8" id="cl3-Gb-Tyl"/>
+                            <constraint firstItem="Rvo-5C-acZ" firstAttribute="top" secondItem="inh-g6-dbK" secondAttribute="bottom" constant="38" id="fFs-zx-Mib"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GhC-SL-LXe" secondAttribute="trailing" constant="26" id="oye-Yp-Owy"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba5-be-C11" userLabel="First Responder" sceneMemberID="firstResponder"/>

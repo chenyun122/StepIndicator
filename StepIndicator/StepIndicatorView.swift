@@ -118,6 +118,11 @@ public class StepIndicatorView: UIView {
         }
     }
     
+    @IBInspectable var showFlag: Bool = true {
+        didSet {
+            self.updateSubLayers()
+        }
+    }
     
     // MARK: - Functions
     private func createSteps() {
@@ -214,6 +219,7 @@ public class StepIndicatorView: UIView {
         annularLayer.tintColor = self.circleTintColor
         annularLayer.lineWidth = self.circleStrokeWidth
         annularLayer.displayNumber = self.displayNumbers
+        annularLayer.showFlag = self.showFlag
     }
     
     private func applyLineStyle(lineLayer:LineLayer) {
