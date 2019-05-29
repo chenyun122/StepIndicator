@@ -16,4 +16,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'StepIndicator' => ['StepIndicator/**/*.xcassets']
   }
+  s.swift_versions = ["4","4.2","5"]
 end
