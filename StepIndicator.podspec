@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "StepIndicator"
-  s.version      = "1.0.7"
+  s.version      = "1.0.7.1"
   s.summary      = "An iOS Step Indicator Library."
   s.description  = <<-DESC
                     StepIndicator is an iOS library that indicates steps in an animated way.
