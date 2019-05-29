@@ -5,7 +5,7 @@
 
 [English](https://github.com/chenyun122/StepIndicator)  
 
-StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。支持 Swift4.1。  
+StepIndicator 是一个以较为生动的方式指示任务步骤的 iOS 库。支持 Swift 5。  
 它的设计思想来源于此 [Android 版本](https://github.com/badoualy/stepper-indicator)。
 
 <p align="center" >
