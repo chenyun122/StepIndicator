@@ -82,7 +82,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         stepIndicatorView.currentStep = Int(pageIndex)
     }
     
-    // MARK: - More Example
+    
+    // MARK: - More Examples
     
     // Example for applying constraints programmatically
     func applyNewConstraints() {
