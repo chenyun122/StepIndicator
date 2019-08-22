@@ -35,8 +35,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         //self.stepIndicatorView.direction = .leftToRight
         //self.stepIndicatorView.showFlag = true
 
-        // Example for apply constrains programmatically
-        self.applyNewConstrains()
+        // Example for apply constraints programmatically
+        self.applyNewConstraints()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,14 +84,14 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     // MARK: - More Example
     
-    // Example for applying constrains programmatically
-    func applyNewConstrains() {
-        // Remove the constrains made in Storyboard before
+    // Example for applying constraints programmatically
+    func applyNewConstraints() {
+        // Remove the constraints made in Storyboard before
         self.stepIndicatorView.removeFromSuperview()
         self.stepIndicatorView.removeConstraints(stepIndicatorView.constraints)
         self.view.addSubview(stepIndicatorView)
         
-        // Add new constrains programmatically
+        // Add new constraints programmatically
         self.stepIndicatorView.widthAnchor.constraint(equalToConstant: 263.0).isActive = true
         self.stepIndicatorView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         self.stepIndicatorView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
