@@ -35,8 +35,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         //self.stepIndicatorView.direction = .leftToRight
         //self.stepIndicatorView.showFlag = true
 
-        // Example for apply constraints programmatically
-        self.applyNewConstraints()
+        // Example for apply constraints programmatically, enable it for test.
+        //self.applyNewConstraints()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,18 +87,23 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     // Example for applying constraints programmatically
     func applyNewConstraints() {
+        // Hold the weak object
+        guard let stepIndicatorView = self.stepIndicatorView else {
+            return
+        }
+        
         // Remove the constraints made in Storyboard before
-        self.stepIndicatorView.removeFromSuperview()
-        self.stepIndicatorView.removeConstraints(stepIndicatorView.constraints)
+        stepIndicatorView.removeFromSuperview()
+        stepIndicatorView.removeConstraints(stepIndicatorView.constraints)
         self.view.addSubview(stepIndicatorView)
         
         // Add new constraints programmatically
-        self.stepIndicatorView.widthAnchor.constraint(equalToConstant: 263.0).isActive = true
-        self.stepIndicatorView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
-        self.stepIndicatorView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        self.stepIndicatorView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor, constant:30.0).isActive = true
+        stepIndicatorView.widthAnchor.constraint(equalToConstant: 263.0).isActive = true
+        stepIndicatorView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        stepIndicatorView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        stepIndicatorView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor, constant:30.0).isActive = true
     
-        self.scrollView.topAnchor.constraint(equalTo: self.stepIndicatorView.bottomAnchor, constant: 8.0).isActive = true
+        self.scrollView.topAnchor.constraint(equalTo: stepIndicatorView.bottomAnchor, constant: 8.0).isActive = true
     }
 }
 
