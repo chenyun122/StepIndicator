@@ -18,9 +18,9 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //In this demo, the customizations have been done in Storyboard.
+        // In this demo, the customizations have been done in Storyboard.
         
-        //Customization by coding:
+        // Customization by coding:
         //self.stepIndicatorView.numberOfSteps = 5
         //self.stepIndicatorView.currentStep = 0
         //self.stepIndicatorView.circleColor = UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
@@ -35,6 +35,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         //self.stepIndicatorView.direction = .leftToRight
         //self.stepIndicatorView.showFlag = true
 
+        // Apply constrains programatically:
+        self.applyNewConstrains()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,5 +82,22 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         stepIndicatorView.currentStep = Int(pageIndex)
     }
     
+    // MARK: - More Example
+    
+    // Example for applying constrains programatically
+    func applyNewConstrains() {
+        // Remove the constrains made in Storyboard before
+        self.stepIndicatorView.removeFromSuperview()
+        self.stepIndicatorView.removeConstraints(stepIndicatorView.constraints)
+        self.view.addSubview(stepIndicatorView)
+        
+        // Add new constrains programatically
+        self.stepIndicatorView.widthAnchor.constraint(equalToConstant: 263.0).isActive = true
+        self.stepIndicatorView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        self.stepIndicatorView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        self.stepIndicatorView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor, constant:30.0).isActive = true
+    
+        self.scrollView.topAnchor.constraint(equalTo: self.stepIndicatorView.bottomAnchor, constant: 8.0).isActive = true
+    }
 }
 
