@@ -24,13 +24,21 @@ public class StepIndicatorView: UIView {
     private var horizontalLineLayers = [LineLayer]()
     private let containerLayer = CALayer()
     
-    // MARK: - Properties
+    
+    // MARK: - Overrided properties and methods
     override public var frame: CGRect {
         didSet{
             self.updateSubLayers()
         }
     }
     
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        self.updateSubLayers()
+    }
+    
+    
+    // MARK: - Custom properties
     @IBInspectable public var numberOfSteps: Int = 5 {
         didSet {
             self.createSteps()
