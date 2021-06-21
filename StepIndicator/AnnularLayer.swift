@@ -13,6 +13,7 @@ class AnnularLayer: CAShapeLayer {
     private let fullCircleLayer = CAShapeLayer()
     private let centerCircleLayer = CAShapeLayer()
     private let flagLayer = CALayer()
+    private let maskLayer = CALayer()
     private let annularPath = UIBezierPath()
     lazy private var centerTextLayer = CATextLayer()
     
@@ -23,6 +24,7 @@ class AnnularLayer: CAShapeLayer {
     
     // MARK: - Properties
     var tintColor:UIColor?
+    var flagTintColor:UIColor?
     var displayNumber = false
     var step:Int = 0
     var annularDefaultColor: UIColor?
@@ -72,7 +74,8 @@ class AnnularLayer: CAShapeLayer {
         }
 
         self.flagLayer.contents = AnnularLayer.flagCGImage
-        self.fullCircleLayer.addSublayer(self.flagLayer)
+        self.maskLayer.mask = self.flagLayer
+        self.fullCircleLayer.addSublayer(self.maskLayer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -207,7 +210,8 @@ class AnnularLayer: CAShapeLayer {
         let flagLayerWidth = self.fullCircleLayer.bounds.width * 0.8
         let flagLayerHeight = self.fullCircleLayer.bounds.height * 0.8
         self.flagLayer.frame = CGRect(x: self.fullCircleLayer.bounds.width * 0.2 / 2.0, y: self.fullCircleLayer.bounds.height * 0.2 / 2.0, width:flagLayerWidth, height:flagLayerHeight)
-        
+        self.maskLayer.frame = self.flagLayer.bounds
+        self.maskLayer.backgroundColor = self.flagTintColor?.cgColor
         self.animateFullCircle()
     }
     
