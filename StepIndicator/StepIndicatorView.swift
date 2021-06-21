@@ -110,6 +110,12 @@ public class StepIndicatorView: UIView {
         }
     }
     
+    @IBInspectable public var flagTintColor:UIColor = .white {
+        didSet {
+            self.updateSubLayers()
+        }
+    }
+    
     public var direction:StepIndicatorViewDirection = .leftToRight {
         didSet{
             self.updateSubLayers()
@@ -225,6 +231,7 @@ public class StepIndicatorView: UIView {
     private func applyAnnularStyle(annularLayer:AnnularLayer) {
         annularLayer.annularDefaultColor = self.circleColor
         annularLayer.tintColor = self.circleTintColor
+        annularLayer.flagTintColor = self.flagTintColor
         annularLayer.lineWidth = self.circleStrokeWidth
         annularLayer.displayNumber = self.displayNumbers
         annularLayer.showFlag = self.showFlag
