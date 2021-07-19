@@ -39,6 +39,12 @@ public class StepIndicatorView: UIView {
     
     
     // MARK: - Custom properties
+    public var titles: [String]? {
+        didSet{
+            self.updateSubLayers()
+        }
+    }
+
     @IBInspectable public var numberOfSteps: Int = 5 {
         didSet {
             self.createSteps()
@@ -188,6 +194,9 @@ public class StepIndicatorView: UIView {
             annularLayer.frame = CGRect(x: x, y: y - self.circleRadius, width: diameter, height: diameter)
             self.applyAnnularStyle(annularLayer: annularLayer)
             annularLayer.step = i + 1
+            if let titles = titles {
+                annularLayer.title = titles[i]
+            }
             annularLayer.updateStatus()
             
             if (i < self.numberOfSteps - 1) {
@@ -210,6 +219,9 @@ public class StepIndicatorView: UIView {
             annularLayer.frame = CGRect(x: x - self.circleRadius, y: y, width: diameter, height: diameter)
             self.applyAnnularStyle(annularLayer: annularLayer)
             annularLayer.step = i + 1
+            if let titles = titles {
+                annularLayer.title = titles[i]
+            }
             annularLayer.updateStatus()
             
             if (i < self.numberOfSteps - 1) {

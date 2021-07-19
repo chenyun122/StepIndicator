@@ -15,6 +15,8 @@ class AnnularLayer: CAShapeLayer {
     private let flagLayer = CALayer()
     private let annularPath = UIBezierPath()
     lazy private var centerTextLayer = CATextLayer()
+    lazy private var titleLayer = CATextLayer()
+
     
     static private let originalScale = CATransform3DMakeScale(1.0, 1.0, 1.0)
     static private let flagImageName = "CYStepIndicator_ic_done_white"
@@ -24,6 +26,7 @@ class AnnularLayer: CAShapeLayer {
     // MARK: - Properties
     var tintColor:UIColor?
     var displayNumber = false
+    var title: String = ""
     var step:Int = 0
     var annularDefaultColor: UIColor?
     
@@ -85,6 +88,8 @@ class AnnularLayer: CAShapeLayer {
     
     // MARK: - Functions
     func updateStatus() {
+        // Persist title through all the states
+        self.drawTitle()
         if isFinished {
             self.path = nil
             self.drawFullCircleAnimated()
@@ -164,6 +169,19 @@ class AnnularLayer: CAShapeLayer {
         self.centerTextLayer.fontSize = fontSize
         
         self.addSublayer(self.centerTextLayer)
+    }
+
+    private func drawTitle() {
+        self.titleLayer.string = "\(self.title)"
+        self.titleLayer.frame = CGRect(x: 0, y: 0, width: 60, height: self.bounds.height)
+        self.titleLayer.position = CGPoint(x: self.bounds.midX, y: self.bounds.maxY * 1.75)
+        self.titleLayer.contentsScale = UIScreen.main.scale
+        self.titleLayer.foregroundColor = self.strokeColor
+        self.titleLayer.alignmentMode = CATextLayerAlignmentMode.center
+        self.titleLayer.font = UIFont.systemFont(ofSize: 10) as CFTypeRef
+        self.titleLayer.fontSize = 10
+
+        self.addSublayer(self.titleLayer)
     }
     
     private func animateCenter() {
